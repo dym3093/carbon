@@ -17,20 +17,15 @@
 
 	<properties>
 		<java.version>1.8</java.version>
-		<carbon-service.version>1.0.0</carbon-service.version>
+		<carbon-auth.version>1.0.0</carbon-auth.version>
 		<carbon-entity.version>1.0.0</carbon-entity.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>com.dayton.carbon</groupId>
-			<artifactId>carbon-service</artifactId>
-			<version>${carbon-service.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.dayton.carbon</groupId>
-			<artifactId>carbon-entity</artifactId>
-			<version>${carbon-entity.version}</version>
+			<artifactId>carbon-auth</artifactId>
+			<version>${carbon-auth.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

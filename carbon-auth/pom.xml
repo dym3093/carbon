@@ -17,11 +17,29 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<carbon-entity.version>1.0.0</carbon-entity.version>
+		<carbon-repo.version>1.0.0</carbon-repo.version>
+		<carbon-service.version>1.0.0</carbon-service.version>
 		<shiro-spring.version>1.6.0</shiro-spring.version>
 		<shiro-redis.version>3.2.3</shiro-redis.version>
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>com.dayton.carbon</groupId>
+			<artifactId>carbon-entity</artifactId>
+			<version>${carbon-entity.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.dayton.carbon</groupId>
+			<artifactId>carbon-repo</artifactId>
+			<version>${carbon-repo.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.dayton.carbon</groupId>
+			<artifactId>carbon-service</artifactId>
+			<version>${carbon-service.version}</version>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.apache.shiro/shiro-spring -->
 		<dependency>
 			<groupId>org.apache.shiro</groupId>
