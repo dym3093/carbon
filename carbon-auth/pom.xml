@@ -20,8 +20,7 @@
 		<carbon-entity.version>1.0.0</carbon-entity.version>
 		<carbon-repo.version>1.0.0</carbon-repo.version>
 		<carbon-service.version>1.0.0</carbon-service.version>
-		<shiro-spring.version>1.6.0</shiro-spring.version>
-		<shiro-redis.version>3.2.3</shiro-redis.version>
+		<carbon-assistant.version>1.0.0</carbon-assistant.version>
 	</properties>
 
 	<dependencies>
@@ -40,19 +39,11 @@
 			<artifactId>carbon-service</artifactId>
 			<version>${carbon-service.version}</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.apache.shiro/shiro-spring -->
 		<dependency>
-			<groupId>org.apache.shiro</groupId>
-			<artifactId>shiro-spring</artifactId>
-			<version>${shiro-spring.version}</version>
+			<groupId>com.dayton.carbon</groupId>
+			<artifactId>carbon-assistant</artifactId>
+			<version>${carbon-assistant.version}</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.crazycake/shiro-redis -->
-		<dependency>
-			<groupId>org.crazycake</groupId>
-			<artifactId>shiro-redis</artifactId>
-			<version>${shiro-redis.version}</version>
-		</dependency>
-
 	</dependencies>
 
 	<build>

@@ -16,6 +16,7 @@
 	<packaging>pom</packaging>
 
 	<modules>
+		<module>carbon-assistant</module>
 		<module>carbon-auth</module>
 		<module>carbon-web</module>
 		<module>carbon-service</module>
@@ -27,6 +28,8 @@
 		<java.version>1.8</java.version>
 		<mysql.version>5.1.49</mysql.version>
 		<data-redis.version>2.3.3.RELEASE</data-redis.version>
+		<shiro-spring.version>1.6.0</shiro-spring.version>
+		<shiro-redis.version>3.2.3</shiro-redis.version>
 		<mybatis-plus.version>3.4.0</mybatis-plus.version>
 		<druid.version>1.1.23</druid.version>
 		<commons-lang3.version>3.11</commons-lang3.version>
@@ -68,6 +71,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>
 			<version>${data-redis.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.crazycake/shiro-redis -->
+		<dependency>
+			<groupId>org.crazycake</groupId>
+			<artifactId>shiro-redis</artifactId>
+			<version>${shiro-redis.version}</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-boot-starter -->
 		<dependency>
