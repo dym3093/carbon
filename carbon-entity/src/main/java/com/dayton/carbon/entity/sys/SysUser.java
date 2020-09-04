@@ -12,7 +12,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import java.io.Serializable;
 
 /**
- * 系统用户表
+ * 系统用户表（基础表）
  * @author Martin Deng
  * @since 2020-09-03 22:15
  */
@@ -21,6 +21,8 @@ import java.io.Serializable;
 @FieldNameConstants
 @EqualsAndHashCode(callSuper = true)
 public class SysUser extends BaseEntity implements Serializable{
+
+	private static final long serialVersionUID = 529414741501491192L;
 
 	/** id */
 	private String id;
