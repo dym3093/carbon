@@ -7,6 +7,7 @@ import lombok.EqualsAndHashCode;
 import lombok.experimental.FieldNameConstants;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 /**
  * 角色表（基础表）
@@ -14,8 +15,21 @@ import java.io.Serializable;
  * @since 2020-09-04 22:04
  */
 @Data
-@Builder
 @FieldNameConstants
 @EqualsAndHashCode(callSuper = true)
 public class SysRole extends BaseEntity implements Serializable {
+
+	private static final long serialVersionUID = -994808078681301428L;
+
+	/** 记录ID */
+	private String id;
+	/** 角色名称 */
+	private String roleName;
+
+	@Builder
+	public SysRole(String remark, Integer status, String createId, LocalDateTime createTime, String updateId, LocalDateTime updateTime, String id, String roleName) {
+		super(remark, status, createId, createTime, updateId, updateTime);
+		this.id = id;
+		this.roleName = roleName;
+	}
 }

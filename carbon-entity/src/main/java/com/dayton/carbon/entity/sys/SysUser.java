@@ -5,11 +5,11 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.FieldNameConstants;
-import lombok.experimental.Tolerate;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 /**
  * 系统用户表（基础表）
@@ -17,7 +17,6 @@ import java.io.Serializable;
  * @since 2020-09-03 22:15
  */
 @Data
-@Builder
 @FieldNameConstants
 @EqualsAndHashCode(callSuper = true)
 public class SysUser extends BaseEntity implements Serializable{
@@ -31,8 +30,16 @@ public class SysUser extends BaseEntity implements Serializable{
 	/** 密码 */
 	private String password;
 
-	@Tolerate
-	public SysUser() {}
+	@Builder
+	public SysUser(String remark, Integer status, String createId,
+	               LocalDateTime createTime, String updateId,
+	               LocalDateTime updateTime, String id, String userName,
+	               String password) {
+		super(remark, status, createId, createTime, updateId, updateTime);
+		this.id = id;
+		this.userName = userName;
+		this.password = password;
+	}
 
 	@Override
 	public String toString() {

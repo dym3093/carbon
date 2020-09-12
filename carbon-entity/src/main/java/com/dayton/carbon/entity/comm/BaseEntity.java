@@ -1,9 +1,9 @@
 package com.dayton.carbon.entity.comm;
 
-import lombok.Builder;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.FieldNameConstants;
-import lombok.experimental.Tolerate;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -14,12 +14,13 @@ import java.time.LocalDateTime;
  * @since 2020-09-03 22:21
  */
 @Data
-@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @FieldNameConstants
 public class BaseEntity implements Serializable{
 
 	/** 备注 */
-	private String remark;
+	protected String remark;
 	/** 记录状态 */
 	protected Integer status;
 	/** 记录创建人ID */
@@ -30,8 +31,5 @@ public class BaseEntity implements Serializable{
 	protected String updateId;
 	/** 修改时间 */
 	protected LocalDateTime updateTime;
-
-	@Tolerate
-	public BaseEntity() {}
 
 }
