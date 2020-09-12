@@ -26,7 +26,7 @@ public class SysRole extends BaseEntity implements Serializable {
 	/** 角色名称 */
 	private String roleName;
 
-	@Builder
+	@Builder(toBuilder = true)
 	public SysRole(String remark, Integer status, String createId, LocalDateTime createTime, String updateId, LocalDateTime updateTime, String id, String roleName) {
 		super(remark, status, createId, createTime, updateId, updateTime);
 		this.id = id;

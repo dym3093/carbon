@@ -28,7 +28,7 @@ public class SysRoleMenu extends BaseEntity implements Serializable {
 	/** 菜单ID */
 	private String menuId;
 
-	@Builder
+	@Builder(toBuilder = true)
 	public SysRoleMenu(String remark, Integer status, String createId, LocalDateTime createTime, String updateId, LocalDateTime updateTime, String id, String roleId, String menuId) {
 		super(remark, status, createId, createTime, updateId, updateTime);
 		this.id = id;

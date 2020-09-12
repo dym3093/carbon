@@ -30,7 +30,7 @@ public class SysUser extends BaseEntity implements Serializable{
 	/** 密码 */
 	private String password;
 
-	@Builder
+	@Builder(toBuilder = true)
 	public SysUser(String remark, Integer status, String createId,
 	               LocalDateTime createTime, String updateId,
 	               LocalDateTime updateTime, String id, String userName,

@@ -26,7 +26,7 @@ public class SysMenu extends BaseEntity implements Serializable {
 	/** 菜单名称 */
 	private String menuName;
 
-	@Builder
+	@Builder(toBuilder = true)
 	public SysMenu(String remark, Integer status, String createId, LocalDateTime createTime, String updateId, LocalDateTime updateTime, String id, String menuName) {
 		super(remark, status, createId, createTime, updateId, updateTime);
 		this.id = id;
